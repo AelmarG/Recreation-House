@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Member Log Page</title>
+    <link rel="stylesheet" href="MemberLogPage.css">
+
+</head>
+
+
+<body>
+    <img class="bg-img-members" src="gym.png">
+    <div class="bg-text" style="transform: translate(-50%, -40%);">
+        <h1>Member Logs</h1>
+        <br>
+        <p>Keep up to date on our members here!</p>
+        <p>Name | Email | Classes Attended | Total Payments </p>
+    </div>
+    
+    <div>
+        <h2 class="bg-text" style="width: 20%; position: relative; transform: translate(-50%, 50%);">
+            Regular Log
+        </h2>
+        <!--log shows up here thru javascript-->
+
+       
+    </div>
+
+    <div style="transform: translate(0%, 490%);">
+        <h2 class="bg-text" style="width: 25%; position: relative; transform: translate(-50%, 50%);">
+            Attended Most Classes
+        </h2>
+        <!--log shows up here thru javascript-->
+
+       
+    </div>
+
+    <div style="transform: translate(0%, 950%);">
+        <h2 class="bg-text" style="width: 20%; position: relative; transform: translate(-50%, 50%);">
+            Paid Most Often
+        </h2>
+        <!--log shows up here thru javascript-->
+        
+    </div>
+
+    
+</body>
+</html>
+
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
+<script src="MemberLogPage.js"></script>

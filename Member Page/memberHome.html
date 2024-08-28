@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Recreation House</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='memberPage.css'>
+</head>
+<body>
+    <div class="main">
+
+        <img class="bg-img-members" style="width: 100%; height: 40vh; object-fit: cover;" src="./exercise.webp">
+        
+        <div style="height: 5%; border: none; padding: none; margin: none;">
+            <div class="bg-text">
+                <h1>Welcome!</h1>
+                <p>Book Practices and Keep Track of Your Payments Below</p>
+            </div>
+        </div>
+
+        <div class="sections-container">
+            
+            <div class="section-container">
+                <h3 style="margin-top: 0; margin-bottom: 0;">Upcoming practices:</h3>
+                <ul id="prac12" style="margin-top: 0;">
+                    
+                </ul>
+            </div>
+
+            <!-- <div class="section-container">
+                <h3 style=" margin-top: 0; margin-bottom: 0;">Missed practices:</h3>
+                <ul style="margin-top: 0;">
+                    <li></li>
+                </ul>
+            </div> -->
+
+            <div class="section-container">
+                <h3 style="margin-bottom: 0; margin-top: 0;">Missed payments:</h3>
+                <ul id="missed-payments" style="margin-top: 0;">
+                    <li></li>
+                </ul>
+            </div>
+
+            <div class="section-container">
+                <h3 style="margin-bottom: 0; margin-top: 0;">Messages:</h3>
+                <ul id="messages"> </ul>
+                
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section-containers" style="text-align: center;">
+        <button class="btn-open-popup" onclick="togglePopup()">Book A Practice</button> 
+        
+        <div id="popupOverlay" class="overlay-container"> 
+            <div class="popup-box"> 
+                <h2 style="color: black;">Add practices below</h2> 
+                <form id="book-practice" class="form-container"> 
+                    
+                    <div id="add-practices">
+                        <label class="form-label" for="cal-prac-picker">Practice Date:</label>
+                        <div class="">
+                            <input type="date" id="cal-prac-picker" name="trip-start" value="" min="2024-04-11" max="2026-01-01" />
+                            <button class="" type="button" onclick="addPractice()">Add</button> 
+                            <p style="margin-bottom: 0%; font-size: 12px;">Practices to book:</p>
+                            <ul style="margin-top: 0;" id="practices-to-add"></ul>
+                        </div>
+                        
+                    </div>
+
+                    <div style="border: 1px solid black; margin-bottom: 2%;"></div>
+                    <label class="form-label" for="fname">First Name:</label> 
+                    <input class="form-input" type="text" placeholder="ex. John" id="fname" name="fname" required> 
+    
+                    <label class="form-label" for="lname">Last Name:</label> 
+                    <input class="form-input" type="text" placeholder="ex. Smith" id="lname" name="lname" required> 
+
+                    <label class="form-label" for="cardnum">Card Number:</label> 
+                    <input class="form-input" type="text" placeholder="ex. 1111 2222 3333 4444" id="cardnum" name="cardnum" required> 
+
+                    <div style="text-align: left; padding-bottom: 1%; ">
+                        <label class="form-label" for="zipcode">Zipcode:</label> 
+                        <input class="form-input" style="width: 25%;" type="text" placeholder=" " id="zipcode" name="zipcode" required> 
+                        
+                        <label class="form-label" for="cardexpiry" style="margin-left: 2%;">Expiry:</label> 
+                        <input style="width: 10%;" type="number" min="01" max="12" step="1" value="0" required/>
+                        <input style="width: 20%;" type="number" min="1900" max="2099" step="1" value="0" required/>
+                    </div>
+        
+                    <button onclick="addAllPractices()"id="addPrac" class="btn-add-pracs" type="submit">Add practices</button> 
+                </form> 
+                <button class="btn-close-popup" onclick="togglePopup()">Close</button> 
+
+            </div> 
+        </div> 
+    </div>
+        
+        
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
+
+  <script src="memberPage.js"></script>
+
+    
+</body>
+</html>
